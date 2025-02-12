@@ -2,10 +2,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class StartScreen extends StatelessWidget {
-  const StartScreen({super.key});
+  const StartScreen(this.startQuiz,{super.key});
+  final void Function() startQuiz;
+
 
   @override
   Widget build(BuildContext context) {
+
+
+
     return Container(
       decoration: const BoxDecoration(
         gradient: LinearGradient(
@@ -25,6 +30,7 @@ class StartScreen extends StatelessWidget {
             Image.asset(
               "assets/images/quiz-logo.png",
               width: 300,
+              color: const Color.fromARGB(150, 255, 255, 255)
             ),
             const SizedBox(
               height: 90, // to create spacing with image and our text
@@ -39,13 +45,14 @@ class StartScreen extends StatelessWidget {
             const SizedBox(
               height: 30,
             ),
-            OutlinedButton(onPressed: () {
-
+            OutlinedButton.icon(onPressed: () {
+              startQuiz();
             },
               style: OutlinedButton.styleFrom(
                 foregroundColor: Colors.white,
-              ) ,
-              child: const Text("Start quiz"
+              ),
+                icon: const Icon(Icons.arrow_forward_outlined),
+              label: const Text("Start quiz"
             ),)
           ],
         ),

@@ -1,6 +1,10 @@
 # Quiz app in flutter
 
 <img src="https://github.com/pulemojatau/quiz_app/blob/main/start.png" alt="My Image" width="300" height="450"/>
+<img src="https://github.com/pulemojatau/quiz_app/blob/main/quiz_page.png" alt="My Image" width="300" height="450"/>
+<img src="https://github.com/pulemojatau/quiz_app/blob/main/results_page.png" alt="My Image" width="300" height="450"/>
+
+
 
 
 📚 Quiz App

@@ -41,23 +41,7 @@ activeScreen =  ResultsScreen(chosenAnswers: selectedAnswers);
   }
    late final List<String> chosenAnswers;
 
-  List<Map<String,Object>> getSummaryData(){
-    final   List<Map<String,Object>> summary = [];
 
-    for(var i=0; i< chosenAnswers.length;i++){
-      summary.add({
-        'question_index' :i,
-        'question' : questions[i].text,
-        'correct_answer': questions[i].answers[0],  //correct is set to be always be the first one in the list
-        'user_answer' : chosenAnswers[i],
-
-      });
-
-    }
-
-    return summary;
-
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -77,7 +61,7 @@ activeScreen =  ResultsScreen(chosenAnswers: selectedAnswers);
               ],
             ),
           ),
-          child: activeScreen, // Removed `const` from here
+          child: activeScreen,
         ),
       ),
     );
